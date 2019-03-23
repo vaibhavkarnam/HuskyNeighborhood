@@ -87,7 +87,7 @@ function userUnlikesevent(req, res) {
     var userId = user._id
     var eventId;
     var type = 'unlike';
-    eventModel.findeventByApiId(req.params['eventId'])
+    eventModel.findeventByApiId(event.id)
         .then(function (mov) {
             eventId = mov._id;
             return likeModel.userUnlikesevent(user, mov)

@@ -77,7 +77,7 @@ function userUnbookmarksevent(req, res) {
     var type = 'unbookmark';
     console.log("unbookmarking");
     console.log(event.id);
-    eventModel.findeventByApiId(req.params['eventId'])
+    eventModel.findeventByApiId(event.id)
         .then(function (mov) {
             eventId = mov._id;
             return bookmarkModel.userUnbookmarksevent(user, mov)
