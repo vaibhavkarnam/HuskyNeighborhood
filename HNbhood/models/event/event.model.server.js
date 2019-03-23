@@ -5,7 +5,6 @@ var eventModel = mongoose.model('eventModel', eventSchema);
 function createevent(event) {
     event.likes = 0;
     event.comments = 0;
-    event.poster_path = 'https://image.tmdb.org/t/p/w500/' + event.poster_path;
     return eventModel.create(event);
 }
 

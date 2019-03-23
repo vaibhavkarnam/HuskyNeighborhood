@@ -10,4 +10,5 @@ require('./services/follow.service.server');
 require('./services/bookmark.service.server');
 require('./services/activity.service.server');
 require('./services/org.service.server');
+require('./services/registration.service.server');
 
