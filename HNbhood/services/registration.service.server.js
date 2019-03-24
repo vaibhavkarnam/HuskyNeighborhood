@@ -48,7 +48,7 @@ function userregistrationsevent(req, res) {
     var userId = user._id;
     var eventId;
     var type = 'registration';
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (m) {
             if (m === null) {
                 return eventModel.createevent(event)
@@ -77,7 +77,7 @@ function userUnregistrationsevent(req, res) {
     var type = 'unregistration';
     console.log("unregistrationing");
     console.log(event.id);
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (mov) {
             eventId = mov._id;
             return registrationModel.userUnregistrationsevent(user, mov)

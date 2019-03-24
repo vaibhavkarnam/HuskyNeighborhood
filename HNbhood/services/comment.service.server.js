@@ -34,7 +34,7 @@ function usercommentsEvent(req, res) {
     var type = 'add comment';
     console.log("commenting");
     console.log(event.id);
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (m) {
             if (m === null) {
                 return eventModel.createevent(event)

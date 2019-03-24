@@ -57,7 +57,7 @@ function userLikesevent(req, res) {
     var userId = user._id;
     var eventId;
     var type = 'like'
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (m) {
             if (m === null) {
                 return eventModel.createevent(event)
@@ -87,7 +87,7 @@ function userUnlikesevent(req, res) {
     var userId = user._id
     var eventId;
     var type = 'unlike';
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (mov) {
             eventId = mov._id;
             return likeModel.userUnlikesevent(user, mov)

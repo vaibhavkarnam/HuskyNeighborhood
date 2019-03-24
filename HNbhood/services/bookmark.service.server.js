@@ -48,7 +48,7 @@ function userBookmarksevent(req, res) {
     var userId = user._id;
     var eventId;
     var type = 'bookmark';
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (m) {
             if (m === null) {
                 return eventModel.createevent(event)
@@ -77,7 +77,7 @@ function userUnbookmarksevent(req, res) {
     var type = 'unbookmark';
     console.log("unbookmarking");
     console.log(event.id);
-    eventModel.findeventByApiId(event.id)
+    eventModel.findeventByApiId(event._id)
         .then(function (mov) {
             eventId = mov._id;
             return bookmarkModel.userUnbookmarksevent(user, mov)

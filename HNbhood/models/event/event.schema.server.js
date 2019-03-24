@@ -9,8 +9,8 @@ var eventSchema = mongoose.Schema({
         type: String
     }],
     venue: String,
-    start_time: Number,
-    end_time: Number,
+    start_time: Date,
+    end_time: Date,
     overview: String,
     likes: Number,
     reviews: Number,
