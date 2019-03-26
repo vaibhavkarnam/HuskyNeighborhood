@@ -17,6 +17,7 @@ var activityModel = require('../models/activity/activity.model.server');
 
 function createEvent(req, res) {
     var event = req.body;
+    event.poster = req.params['userId'];
     eventModel.createevent(event)
         .then(function (Event) {
         res.json(Event);
