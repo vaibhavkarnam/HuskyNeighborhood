@@ -77,7 +77,7 @@ function userUnregistrationsevent(req, res) {
     var type = 'unregistration';
     console.log("unregistrationing");
     console.log(event.id);
-    eventModel.findeventByApiId(event._id)
+    eventModel.findeventByApiId(req.params['eventId'])
         .then(function (mov) {
             eventId = mov._id;
             return registrationModel.userUnregistrationsevent(user, mov)
