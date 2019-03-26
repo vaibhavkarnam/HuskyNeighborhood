@@ -3,7 +3,7 @@ var eventSchema = mongoose.Schema({
     title: String,
     description: String,
     last_upd_date: Date,
-    Org: {type: mongoose.Schema.Types.ObjectId, ref: 'orgModel'},
+    poster: {type: mongoose.Schema.Types.ObjectId, ref: 'UserModel'},
     image_path: String,
     tags: [{
         type: String
