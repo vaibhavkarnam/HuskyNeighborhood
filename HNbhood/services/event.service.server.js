@@ -5,6 +5,7 @@ app.get('/api/HNbhood/:eventId', findEvent);
 app.delete('/api/HNbhood/:EventId', deleteEvent);
 app.put('/api/HNbhood/:EventId', updateEvent);
 app.get('/api/HNbhood/', findAllEvents);
+app.get('/api/HNbhood/:orgId', findAlleventsForOrg);
 app.post('/api/HNbhood/user/:userId/event', createEvent);
 
 
@@ -48,6 +49,14 @@ function updateEvent(req, res) {
     eventModel.updateevent(id, Event)
         .then(function () {
             res.json(Event);
+        })
+}
+
+function findAlleventsForOrg(req, res) {
+    var orgId = req.params['orgId'];
+    eventModel.findeventsFororg(orgId)
+        .then(function (result) {
+            res.json(result);
         })
 }
 

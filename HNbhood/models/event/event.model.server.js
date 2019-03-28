@@ -69,6 +69,13 @@ function updateevent(eventId, event) {
     })
 }
 
+function findeventsFororg(orgId) {
+    return eventModel
+        .find({poster: orgId})
+        .populate('event')
+        .exec();
+}
+
 
 module.exports = {
     createevent: createevent,
@@ -81,4 +88,5 @@ module.exports = {
     decrementeventcomments: decrementeventcomments,
     deleteevent: deleteevent,
     updateevent: updateevent,
+    findeventsFororg:findeventsFororg,
 };
