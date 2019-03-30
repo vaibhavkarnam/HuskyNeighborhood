@@ -26,7 +26,7 @@ function findAllcomments(req, res) {
 }
 
 function usercommentsEvent(req, res) {
-    var event = req.body;
+    var event = req.body.event;
     var comment = req.body.comment;
     var user = req.session['currentUser'];
     var userId = user._id;
