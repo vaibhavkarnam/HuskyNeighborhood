@@ -4,6 +4,8 @@ app.post('/api/HNbhood/registration/event', userregistrationsevent);
 app.delete('/api/HNbhood/registration/event/:eventId', userUnregistrationsevent);
 app.get('/api/HNbhood/registration/event/:eventId/check', checkregistration);
 app.get('/api/HNbhood/registration/user/:userId/event/', findAllregistrationedeventsForUser);
+app.get('/api/HNbhood/registration/event/:eventId', findAllUsersForEvent);
+
 
 
 var registrationModel = require('../models/registration/registration.model.server');
@@ -41,6 +43,13 @@ function findAllregistrationedeventsForUser(req, res) {
         })
 }
 
+function findAllUsersForEvent(req, res) {
+    var eventId = req.params['eventId'];
+    registrationModel.findUsersforregistrationedevent(eventId)
+        .then(function (result) {
+            res.json(result);
+        })
+}
 
 function userregistrationsevent(req, res) {
     var event = req.body;
