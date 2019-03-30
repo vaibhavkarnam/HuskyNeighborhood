@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin",
-        "https://husky-neighborhood.herokuapp.com");
+        "http://localhost:4200");
     res.header("Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept");
     res.header("Access-Control-Allow-Methods",
@@ -31,4 +31,4 @@ app.use(express.static(__dirname + '/public'));
 require ('./HNbhood/app');
 require("./test/app");
 
-app.listen(process.env.PORT ||3000);
+app.listen(process.env.PORT ||4000);
