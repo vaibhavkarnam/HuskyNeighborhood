@@ -37,6 +37,7 @@ function findUsersforregistrationedevent(eventId) {
         .exec();
 }
 
+
 function checkregistration(userId, eventId) {
     var registration = {
         user: userId,

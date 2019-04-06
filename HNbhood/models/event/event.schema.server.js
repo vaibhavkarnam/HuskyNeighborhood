@@ -9,6 +9,8 @@ var eventSchema = mongoose.Schema({
         type: String
     }],
     venue: String,
+        room: String,
+    directions: String,
     start_time: Date,
     end_time: Date,
     overview: String,

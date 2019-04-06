@@ -60,11 +60,21 @@ function updateevent(eventId, event) {
     // if (user.role === ''|| user.role === undefined ) {
     //     user.role = 'user';
     // }
+
+    // Need to update all fields of Event here!!!!
     return eventModel.update({_id: eventId}, {
         $set: {
             title: event.title,
-            poster_path: event.poster_path,
-            overview: event.overview,
+            description: event.description,
+            last_upd_date: event.last_upd_date,
+            poster: event.poster,
+            image_path: event.image_path,
+            tags: event.tags,
+            venue: event.venue,
+            room: event.room,
+            start_time: event.start_time,
+            end_time: event.end_time
+        
         },
     })
 }
