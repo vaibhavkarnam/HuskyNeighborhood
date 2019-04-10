@@ -70,7 +70,7 @@ function updateUser(userId, user) {
     return userModel.update({_id: userId}, {
 
         $set: {
-            name: user.username,
+            name: user.name,
             username: user.username,
             firstName: user.firstName,
             lastName: user.lastName,
@@ -80,7 +80,7 @@ function updateUser(userId, user) {
             dateB: user.dateB,
             img_path: user.img_path,
             bio: user.bio,
-            specialization: user.bio,
+            specialization: user.specialization,
             facebook: user.facebook,
             phone: user.phone,
             address: user.address
