@@ -63,10 +63,6 @@ function updateUser(userId, user) {
         user.img_path = "https://i1.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100"
     }
 
-    if (user.role === '' || user.role === undefined) {
-        user.role = 'user';
-    }
-
     return userModel.update({_id: userId}, {
 
         $set: {
