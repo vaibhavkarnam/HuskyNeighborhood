@@ -74,7 +74,7 @@ function updateevent(eventId, event) {
             room: event.room,
             start_time: event.start_time,
             end_time: event.end_time
-        
+
         },
     })
 }
