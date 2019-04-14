@@ -72,6 +72,7 @@ function updateevent(eventId, event) {
             tags: event.tags,
             venue: event.venue,
             room: event.room,
+            directions: event.directions,
             start_time: event.start_time,
             end_time: event.end_time
 
