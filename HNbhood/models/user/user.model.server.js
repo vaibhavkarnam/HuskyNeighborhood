@@ -82,7 +82,6 @@ function updateUser(userId, user) {
             address: user.address
         },
     });
-
 }
 
 function findAllUsers() {
