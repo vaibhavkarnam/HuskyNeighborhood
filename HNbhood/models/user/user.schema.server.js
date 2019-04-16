@@ -7,6 +7,7 @@ var userSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
     img_path: String,
+    role: String,
     interests: [{
             type: String
         }],
