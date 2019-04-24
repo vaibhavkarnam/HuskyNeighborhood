@@ -1,3 +1,5 @@
+
+
 var mongoose = require('mongoose');
 var activitySchema = require('./activity.schema.server');
 var activityModel = mongoose.model(
@@ -24,8 +26,7 @@ function addActivity(Id, Id2, type) {
             type: type,
             date: date
         };
-    }
-    else {
+    } else {
         activity = {
             user: Id,
             event: Id2,
@@ -54,20 +55,20 @@ function checkActivity(userId, eventId) {
     var activity = {
         user: userId,
         event: eventId
-    }
+    };
     return activityModel.findOne(activity);
 }
 
-function deleteevent(id){
+function deleteevent(id) {
     return activityModel.remove({event: id})
 }
 
-function deleteUser1(id){
+function deleteUser1(id) {
     return activityModel.remove({user: id})
 
 }
 
-function deleteUser2(id){
+function deleteUser2(id) {
     return activityModel.remove({user2: id})
 
 }

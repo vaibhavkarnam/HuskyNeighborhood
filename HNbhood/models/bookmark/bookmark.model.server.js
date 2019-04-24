@@ -41,15 +41,15 @@ function checkBookmark(userId, eventId) {
     var bookmark = {
         user: userId,
         event: eventId
-    }
+    };
     return bookmarkModel.findOne(bookmark);
 }
 
-function deleteevent(eventId){
+function deleteevent(eventId) {
     return bookmarkModel.remove({event: eventId})
 }
 
-function deleteUser(userId){
+function deleteUser(userId) {
     return bookmarkModel.remove({user: userId})
 }
 

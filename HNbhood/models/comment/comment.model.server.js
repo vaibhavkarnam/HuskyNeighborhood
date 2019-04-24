@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var commentSchema = require('./comment.schema.server');
-var commentModel = mongoose.model('commentModel',commentSchema);
+var commentModel = mongoose.model('commentModel', commentSchema);
 
 function usercommentsevent(user, event, comment) {
     var date = new Date();
@@ -36,14 +36,13 @@ function findAllcommentsForevent(eventId) {
         .exec();
 }
 
-function deleteevent(eventId){
+function deleteevent(eventId) {
     return commentModel.remove({event: eventId})
 }
 
-function deleteUser(userId){
+function deleteUser(userId) {
     return commentModel.remove({user: userId})
 }
-
 
 
 module.exports = {

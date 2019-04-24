@@ -21,7 +21,6 @@ app.use(function(req, res, next) {
 
 
 app.set('view engine', 'ejs');
-// require("./utilities/filelist");
 
 app.use(cookieParser());
 app.use(session({ secret: "put some text here" }));
