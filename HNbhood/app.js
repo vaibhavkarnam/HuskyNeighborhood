@@ -1,6 +1,3 @@
-/**
- * Created by vaibhav on 27-07-2017.
- */
 require('./services/user.service.server.js');
 require('./services/event.service.server');
 require('./services/comment.service.server');

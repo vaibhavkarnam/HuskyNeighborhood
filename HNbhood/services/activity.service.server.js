@@ -73,7 +73,7 @@ function userActivitysevent(req, res) {
 
 function userUnactivitysevent(req, res) {
     var event = req.body;
-    var user = req.session['currentUser']
+    var user = req.session['currentUser'];
     var eventId;
     eventModel.findeventByApiId(event.id)
         .then(function (mov) {

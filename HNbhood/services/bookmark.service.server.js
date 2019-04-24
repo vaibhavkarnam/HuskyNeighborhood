@@ -14,7 +14,7 @@ var activityModel = require('../models/activity/activity.model.server');
 function checkBookmark(req, res) {
     var id = req.params['eventId'];
     var user = req.session['currentUser'];
-    var userId = user._id
+    var userId = user._id;
     eventModel.findeventByApiId(id)
         .then(function (m) {
             if (m === null) {

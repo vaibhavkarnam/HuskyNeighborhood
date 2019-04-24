@@ -29,37 +29,36 @@ function createorg(org) {
     console.log(org);
     console.log('hi');
     return orgModel
-            .create(org);
+        .create(org);
 
 }
 
 function findorgByCred(credentials) {
 
     return orgModel
-            .findOne(credentials);
+        .findOne(credentials);
 
 }
 
 function findorgById(orgId) {
 
     return orgModel
-            .findById(orgId);
+        .findById(orgId);
 
 }
 
 function findorgByorgname(orgname) {
 
     return orgModel
-            .findOne({orgname: orgname});
+        .findOne({orgname: orgname});
 
 }
-
 
 
 function deleteorg(id) {
 
     return orgModel
-            .remove({_id: id});
+        .remove({_id: id});
 
 }
 
@@ -94,7 +93,7 @@ function findAllorgs() {
 
     console.log("innnnn");
     return orgModel
-            .find();
+        .find();
 
 }
 

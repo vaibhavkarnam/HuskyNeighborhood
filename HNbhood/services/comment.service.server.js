@@ -60,8 +60,8 @@ function usercommentsEvent(req, res) {
 function deletecomment(req, res) {
     var body = req.body;
     var comment = body.comment;
-    var userId = req.params['userId']
-    var apiId = req.params['eventId']
+    var userId = req.params['userId'];
+    var apiId = req.params['eventId'];
     var EventId;
     var type = 'delete comment'
     eventModel.findeventByApiId(apiId)

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var likeSchema = require('./like.schema.server');
-var likeModel = mongoose.model('LikeModel',likeSchema);
+var likeModel = mongoose.model('LikeModel', likeSchema);
 
 module.exports = {
     userLikesevent: userLikesevent,
@@ -30,11 +30,11 @@ function userUnlikesevent(user, event) {
     return likeModel.deleteOne(like);
 }
 
-function deleteevent(eventId){
+function deleteevent(eventId) {
     return likeModel.remove({event: eventId})
 }
 
-function deleteUser(userId){
+function deleteUser(userId) {
     return likeModel.remove({user: userId})
 }
 
@@ -57,6 +57,6 @@ function checkLike(userId, eventId) {
     var like = {
         user: userId,
         event: eventId
-    }
+    };
     return likeModel.findOne(like);
 }

@@ -48,19 +48,11 @@ function decrementeventcomments(eventId) {
 }
 
 
-
 function deleteevent(id) {
     return eventModel.remove({_id: id});
 }
 
 function updateevent(eventId, event) {
-    // if (user.img_path === '' || user.img_path === undefined) {
-    //     user.img_path = "https://i1.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100"
-    // }
-    // if (user.role === ''|| user.role === undefined ) {
-    //     user.role = 'user';
-    // }
-
     // Need to update all fields of Event here!!!!
     return eventModel.update({_id: eventId}, {
         $set: {
@@ -99,5 +91,5 @@ module.exports = {
     decrementeventcomments: decrementeventcomments,
     deleteevent: deleteevent,
     updateevent: updateevent,
-    findeventsFororg:findeventsFororg,
+    findeventsFororg: findeventsFororg,
 };

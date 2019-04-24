@@ -24,37 +24,36 @@ function createUser(user) {
     }
 
     return userModel
-            .create(user);
+        .create(user);
 
 }
 
 function findUserByCred(credentials) {
 
     return userModel
-            .findOne(credentials);
+        .findOne(credentials);
 
 }
 
 function findUserById(userId) {
 
     return userModel
-            .findById(userId);
+        .findById(userId);
 
 }
 
 function findUserByUsername(username) {
 
     return userModel
-            .findOne({username: username});
+        .findOne({username: username});
 
 }
-
 
 
 function deleteUser(id) {
 
     return userModel
-            .remove({_id: id});
+        .remove({_id: id});
 
 }
 
@@ -87,9 +86,8 @@ function updateUser(userId, user) {
 function findAllUsers() {
 
     return userModel
-            .find();
+        .find();
 
 }
-
 
 module.exports = users;
